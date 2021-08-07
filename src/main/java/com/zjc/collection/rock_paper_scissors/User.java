@@ -11,6 +11,15 @@ public class User {
 
     String choose;
     int chooseNumeral;
+    int chooseCount;
+
+    public int getChooseCount() {
+        return chooseCount;
+    }
+
+    public void setChooseCount(int chooseCount) {
+        this.chooseCount = chooseCount;
+    }
 
     public String getChoose() {
         return choose;
@@ -35,11 +44,16 @@ public class User {
 
         if ("石头".equals(choose)) {
             chooseNumeral = 2;
+            chooseCount = 0;
         } else if ("剪刀".equals(choose)) {
             chooseNumeral = 1;
+            chooseCount = 0;
         } else if ("布".equals(choose)) {
             chooseNumeral = 0;
+            chooseCount = 0;
         } else {
+            System.out.println("输入错误！！！");
+            chooseCount = 1;
         }
 
 //        if (choose == "石头"){
